@@ -19,8 +19,20 @@ export class ProductsService {
 
 
   async create(createProductDto: CreateProductDto) {
-    
     try {
+
+      if(!createProductDto.slug) {
+        createProductDto.slug = createProductDto.title.
+        toLowerCase()
+        .replaceAll(' ', '_')
+        .replace("'",'')
+      }else{
+        createProductDto.slug = createProductDto.title.
+        toLowerCase()
+        .replaceAll(' ', '_')
+        .replace("'",'')
+      }
+
       //? Insertar productos en la base de datos con nuestro repositorio
       const product = this.productRepository.create(createProductDto);
       await this.productRepository.save(product);
