@@ -5,7 +5,7 @@ import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
-    //! Configuracion de nuestras variables de entorno
+    //* Configuracion de nuestras variables de entorno
     ConfigModule.forRoot(),
 
     //* Configuracion de la base detados con ORM

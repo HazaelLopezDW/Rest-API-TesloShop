@@ -10,6 +10,7 @@ import { Product } from './entities/product.entity';
     ProductsService
   ],
   imports: [
+    //* Importamos nuestro entity de productos con TypeOrm
     TypeOrmModule.forFeature([ Product ])
   ]
 })
