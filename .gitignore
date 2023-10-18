@@ -34,7 +34,7 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Excluyendo nuestras variables de entorn
+# Excluyendo nuestras variables de entorno
 .env
 
 # Excluyendo nuestra carpeta de base de datos
