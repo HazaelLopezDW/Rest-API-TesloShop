@@ -16,6 +16,7 @@ async function bootstrap() {
     })
    );
 
+   // * Llamamos el listen para que nuestro servidor corra en el puerto especificado 
   await app.listen(process.env.PORT);
 }
 bootstrap();
