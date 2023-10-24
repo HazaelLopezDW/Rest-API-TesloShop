@@ -6,11 +6,11 @@ import { join } from 'path';
 export class FilesService {
   
 
-    getStaticPrdoctImage(imageName: string) {
-        const path = join(__dirname, '../../static/uploads', imageName);
+    getStaticProduvtImage(imageName: string) {
+        const path = join(__dirname, '../../static/products', imageName);
 
         if(!existsSync(path)) {
-            throw new BadRequestException(`Not product fond with image ${imageName}`);
+            throw new BadRequestException(`Not product fond with image - ${imageName}`);
         }
 
         return path;

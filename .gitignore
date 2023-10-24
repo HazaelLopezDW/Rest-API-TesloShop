@@ -39,3 +39,6 @@ lerna-debug.log*
 
 # Excluyendo nuestra carpeta de base de datos
 /postgres
+
+# Excluyendo el directorio static
+/static

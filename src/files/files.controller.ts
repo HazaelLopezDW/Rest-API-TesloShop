@@ -16,13 +16,13 @@ export class FilesController {
   ) {}
 
 
-  @Get('product/:imageName')
+  @Get('products/:imageName')
   findProductImage(
     @Res() res: Response,
     @Param('imageName') imageName: string
   ) {
 
-    const path = this.filesService.getStaticPrdoctImage(imageName)
+    const path = this.filesService.getStaticProduvtImage(imageName);
 
     res.sendFile(path);
   }
@@ -33,7 +33,7 @@ export class FilesController {
     fileFilter: FileFilter,
     // limits: {fileSize: 3000}
     storage: diskStorage({
-      destination: './static/uploads',
+      destination: './static/products',
       filename: FileNamer
     })
   }))
@@ -45,7 +45,7 @@ export class FilesController {
       throw new BadRequestException(`Maekl sure that the file is an image`);
     }
 
-    const secureUrl = `${this.configService.get('HOST_API')}/files/uploads/${file.filename}`
+    const secureUrl = `${this.configService.get('HOST_API')}/files/product/${file.filename}`
 
     return {secureUrl};
   }

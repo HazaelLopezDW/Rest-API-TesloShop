@@ -4,7 +4,7 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const logger = new Logger('bootstrap')
+  const logger = new Logger('Bootstrap')
 
   //* Prefijos de nuestras rutas
   app.setGlobalPrefix('api');

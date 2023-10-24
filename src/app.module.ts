@@ -25,6 +25,7 @@ import { join } from 'path';
       synchronize: true, 
     }),
 
+    // * Configuracion de nuestros archivos estaticos
     ServeStaticModule.forRoot({
       rootPath: join(__dirname,'..','public'),
     }),
