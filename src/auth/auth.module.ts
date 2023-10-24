@@ -8,7 +8,7 @@ import { User } from './entities/user.entity';
   controllers: [AuthController],
   providers: [AuthService],
   imports: [
-    TypeOrmModule.forFeature([ User ])
+    TypeOrmModule.forFeature([ User ]) //? Cargamos nuestra tabla en la DB
   ],
   exports: [
     TypeOrmModule
