@@ -4,7 +4,10 @@ import { IsEmail, IsString, Matches, MaxLength, MinLength } from "class-validato
 
 export class CreateUserDto {
 
-    @ApiProperty()
+    @ApiProperty({
+        description: 'Email for create (unique)',
+        nullable: false,
+    })
     @IsString()
     @IsEmail()
     email: string;
