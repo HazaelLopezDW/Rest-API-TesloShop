@@ -7,6 +7,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const logger = new Logger('Bootstrap')
 
+  //* Implementamos nuestros cors
+  app.enableCors();
+
   //* Prefijos de nuestras rutas
   app.setGlobalPrefix('api');
 
